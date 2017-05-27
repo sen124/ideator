@@ -1,0 +1,40 @@
+$primary-font: 'Poppins', sans-serif;  
+ 
+
+.navbar-default {
+  font-family: $primary-font;
+}
+
+.menu-bar{width:980px;
+          height:800px;
+         text-shadow:0 0 3px;
+         padding:10px;
+         background:grey;
+}
+.navbar-brand{ margin-top:150px;
+      margin-left:200px;
+      padding:0px;
+     float:left;
+     color:purple;
+     font-size:50px;
+     
+    border-width: 5px;
+    text-align:center;
+}
+
+.navbar-brand1{padding:5px;
+float:left;
+    color:green;
+    font-size:25px;
+    border-width: 5px;
+}
+.navbar-brand2{padding:5px;
+    float:left;
+    color:black;
+    font-size:25px;
+}
+.navbar-brand3{float:left;
+    padding:5px;
+    color:brown;
+    font-size:25px;
+}
