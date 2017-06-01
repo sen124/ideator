@@ -1,40 +1,84 @@
 $primary-font: 'Poppins', sans-serif;  
- 
+ $footer-height: 45px; 
 
 .navbar-default {
   font-family: $primary-font;
 }
 
-.menu-bar{width:980px;
-          height:800px;
+.menu-bar{width:1000px;
+          height:1200px;
          text-shadow:0 0 3px;
-         padding:10px;
+         padding:opx;
          background:grey;
 }
-.navbar-brand{ margin-top:150px;
-      margin-left:200px;
-      padding:0px;
-     float:left;
-     color:purple;
+.background-img{
+    background: url();
+    background-size: 1px;
+    background-repeat: no-repeat;
+    
+    
+    
+    
+}
+.navbar-brand{margin-top:-449px;
+margin-left:-19%;
+      float:left;
+      padding:40%;
+      padding-left:175px;
+      padding-right:10px;
+      color:purple;
      font-size:50px;
      
     border-width: 5px;
     text-align:center;
 }
 
-.navbar-brand1{padding:5px;
-float:left;
+.navbar-brand1{
+    margin-top:-30%;
+    padding-top:60px;
+    padding-right:150px;
+    padding-left:250px;
+    padding-bottom:350px;
+    float:left;
     color:green;
     font-size:25px;
     border-width: 5px;
 }
-.navbar-brand2{padding:5px;
+.navbar-brand2{
+    margin-top:-30%;
+    padding-right:5px;
     float:left;
     color:black;
     font-size:25px;
+    float:right;
 }
-.navbar-brand3{float:left;
-    padding:5px;
+.navbar-brand3{
+    margin:-30%;
+    float:left;
+    padding-top:15px;
+    padding-left:75px;
     color:brown;
     font-size:25px;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -$footer-height;
+  /* Pad bottom by footer height */
+  padding: 0 0 $footer-height;
+}
+
+
+.footer {
+  height: $footer-height;
 }
