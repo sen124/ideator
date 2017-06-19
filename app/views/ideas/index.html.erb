@@ -1,84 +1,34 @@
-<% @ideas.each do |idea| %>
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <blockquote>
-        <p><%= idea.Username %></p>
-        <small>by <%= idea.Password %></small>
-      </blockquote> 
-    </div>
-  </div>
-<% end %>
 
-
-<div class="menu-bar">
-<div class="navbar-brand">
- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  WELCOME
+<div class="sen">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Welcome
 </button>
-<div class="background-img" >
-<a href='https://postimg.org/image/q5hlsd0ht/' target='_blank'><img src='https://s16.postimg.org/ak0a8eojp/basanta.jpg' border='0' alt='basanta'/><br /><a target='_blank' href='https://postimage.io/'></a><br />
+
 </div>
-
-
-
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="myModalLabel">Log In Please</h4>
+        <h4 class="modal-title" id="myModalLabel">::::::::::::::::::::::::::::Write something on Username as Description and Password as your name::::::::::::::::::::::</h4>
       </div>
-      <div class="modal-body">
-        <%=simple_form_for Idea.new do |f|%>
-        <%= f.input :Username %>
-        <%= f.input :Password %>
-      
-
-      </div>
-      <div class="modal-footer">
-   
-        <%= f.submit 'Submit',class: 'btn btn-primary' %>
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <% end %>
-      </div>
+      <%= simple_form_for Idea.new do |f| %>
+        <div class="modal-body">
+          <%= f.input :Username %>
+          <%= f.input :Password %>
+        </div>      
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit 'Submit', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-</div>
 
 
-<div class="navbar-brand1">
-    
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand1" href="/">About</a>
-    
-</div>
-<div class="navbar-brand2">
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand2" href="/">Listen</a>
-  </div>
-<div class="navbar-brand3">
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand3" href="/">Contact</a>
-</div>
-</div>
 
+<div class="Shisir">
 <% @ideas.each do |idea| %>
   <div class="panel panel-default">
     <div class="panel-body">
@@ -86,7 +36,20 @@
         <p><%= idea.Username %></p>
         <small>by <%= idea.Password %></small>
       </blockquote> 
+       <br>
+       <%= link_to 'Delete', idea_path(idea), method: :delete , class: 'btn btn-sm btn-danger', data: {confirm:"are you sure?"}%>
+       <%= link_to 'Revise', edit_idea_path(idea), method: :get , class: 'btn btn-sm btn-success'%>
+   
+      
     </div>
-  </div>
-<% end %>
   
+</div>
+
+<%end%>
+<div class = "text-center">
+  <%= will_paginate @ideas %>
+</div>
+
+
+
+

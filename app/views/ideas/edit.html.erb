@@ -1,0 +1,7 @@
+<h1>Revise Idea</h1>
+
+<%= simple_form_for @idea, method: :patch do |f| %>
+<%= f.input :Username %>
+  <%= f.input :Password %>
+  <%= f.submit 'Submit', class: 'btn btn-primary' %>
+<% end %>
